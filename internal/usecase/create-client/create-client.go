@@ -1,4 +1,4 @@
-package createclient
+package createClient
 
 import (
 	"time"
@@ -8,8 +8,8 @@ import (
 )
 
 type CreateClientInputDTO struct {
-	Name  string
-	Email string
+	Name  string `json:"name"`
+	Email string `json:"email"`
 }
 
 type CreateClientOutputDTO struct {
