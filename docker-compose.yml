@@ -1,12 +1,22 @@
 version: "3"
 
 services:
-  goapp:
-    build: .
+  core:
+    build:
+      context: ./core
+      dockerfile: Dockerfile
     volumes:
-      - .:/app
+      - ./core:/app
     ports:
       - 8080:8080
+  microservico-b:
+    build:
+      context: ./microservico-b
+      dockerfile: Dockerfile
+    volumes:
+      - ./microservico-b:/app
+    ports:
+      - 8081:8081
   mysql:
     image: mysql:5.7
     platform: linux/amd64
