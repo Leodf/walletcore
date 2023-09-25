@@ -48,7 +48,7 @@ func main() {
 	createAccountUseCase := createAccount.NewCreateAccountUseCase(accountDb, clientDb)
 	createTransactionUseCase := createTransaction.NewCreateTransactionUseCase(uow, eventDispatcher, transactionCreatedEvent)
 
-	webServer := webserver.NewWebServer(":3000")
+	webServer := webserver.NewWebServer(":8080")
 
 	clientHandler := web.NewWebClientHandler(*createClientUseCase)
 	accountHandler := web.NewWebAccountHandler(*createAccountUseCase)
