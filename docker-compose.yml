@@ -9,9 +9,9 @@ services:
       - ./core:/app
     ports:
       - 8080:8080
-  microservico-b:
+  balances:
     build:
-      context: ./microservico-b
+      context: ./balances
       dockerfile: Dockerfile
     volumes:
       - ./microservico-b:/app
