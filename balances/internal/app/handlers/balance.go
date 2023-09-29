@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"github.com.br/Leodf/walletcore/balances/domain/exception"
-	"github.com.br/Leodf/walletcore/balances/domain/usecase"
+	"github.com.br/Leodf/walletcore/balances/internal/domain/exception"
+	"github.com.br/Leodf/walletcore/balances/internal/domain/usecase"
 	"github.com/gofiber/fiber/v2"
 )
 

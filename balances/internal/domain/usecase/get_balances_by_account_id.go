@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com.br/Leodf/walletcore/balances/domain/exception"
-	"github.com.br/Leodf/walletcore/balances/domain/repository"
+	"github.com.br/Leodf/walletcore/balances/internal/domain/exception"
+	"github.com.br/Leodf/walletcore/balances/internal/domain/repository"
 )
 
 type GetBalancesInput struct {

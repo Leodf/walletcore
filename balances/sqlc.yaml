@@ -1,11 +1,9 @@
 version: "2"
 sql:
   - engine: "mysql"
-    schema: "database/sql/schema.sql"
-    queries: "database/sql/queries.sql"
+    schema: "internal/database/migrations"
+    queries: "internal/database/sqlc/queries.sql"
     gen:
       go:
         package: "database"
-        out: "database/repository"
-        custom_templates:
-          models: ./database/repository/models_template.go
+        out: "internal/database/mysql"

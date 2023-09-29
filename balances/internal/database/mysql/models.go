@@ -5,7 +5,7 @@
 package database
 
 import (
-	"github.com.br/Leodf/walletcore/balances/domain/repository"
+	"github.com.br/Leodf/walletcore/balances/internal/domain/repository"
 )
 
 type Balance = repository.RepositoryOutput
