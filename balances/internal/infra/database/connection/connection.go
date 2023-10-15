@@ -4,13 +4,13 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com.br/Leodf/walletcore/balances/pkg/env"
+	"github.com.br/Leodf/walletcore/balances/internal/infra/env"
 	_ "github.com/go-sql-driver/mysql"
 )
 
-var Db *sql.DB
+var DB *sql.DB
 
-func InitDatabase() *sql.DB {
+func InitDatabase() {
 	db, err := sql.Open(
 		"mysql",
 		fmt.Sprintf(
@@ -28,6 +28,5 @@ func InitDatabase() *sql.DB {
 		panic(err)
 	}
 	fmt.Println("Database is connected")
-	Db = db
-	return db
+	DB = db
 }

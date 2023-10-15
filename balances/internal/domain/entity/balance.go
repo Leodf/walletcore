@@ -7,7 +7,7 @@ import (
 	"github.com/google/uuid"
 )
 
-var LIMIT_ACCOUNT = -500
+var MIN_LIMIT_ACCOUNT = 5
 
 type Balance struct {
 	ID         string
@@ -34,8 +34,8 @@ func (b *Balance) validate() error {
 	if b.AccountID == "" {
 		return errors.New("accountId cannot be empty")
 	}
-	if b.Amount < float64(LIMIT_ACCOUNT) {
-		return errors.New("amount exceeds limit")
+	if b.Amount < float64(MIN_LIMIT_ACCOUNT) {
+		return errors.New("amount must be greater than 5, but the core service saves an amount in the account table until it reaches a zero value - this is a simulated error")
 	}
 	return nil
 }

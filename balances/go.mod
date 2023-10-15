@@ -2,11 +2,15 @@ module github.com.br/Leodf/walletcore/balances
 
 go 1.20
 
-require github.com/gofiber/fiber/v2 v2.49.2
+require (
+	github.com/confluentinc/confluent-kafka-go/v2 v2.2.0
+	github.com/go-sql-driver/mysql v1.7.1
+	github.com/gofiber/fiber/v2 v2.49.2
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
-	github.com/google/uuid v1.3.1 // indirect
+	github.com/google/uuid v1.3.1
 	github.com/joho/godotenv v1.5.1
 	github.com/klauspost/compress v1.16.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect

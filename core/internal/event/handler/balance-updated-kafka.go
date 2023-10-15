@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"sync"
 
 	"github.com.br/Leodf/walletcore/pkg/events"
@@ -20,5 +19,4 @@ func NewBalanceUpdatedKafkaHandler(kafka *kafka.Producer) *BalanceUpdatedKafkaHa
 func (h *BalanceUpdatedKafkaHandler) Handle(message events.EventInterface, wg *sync.WaitGroup) {
 	defer wg.Done()
 	h.Kafka.Publish(message, nil, "balances")
-	fmt.Println("BalanceUpdatedKafkaHandler called ")
 }

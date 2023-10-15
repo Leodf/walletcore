@@ -1,0 +1,4 @@
+GET http://localhost:3003
+
+###
+GET http://localhost:3003/api/balances/a9bbab6d-af22-4986-a430-6f1b52bf3ab7

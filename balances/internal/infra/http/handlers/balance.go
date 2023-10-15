@@ -1,4 +1,4 @@
-package handler
+package handlers
 
 import (
 	"github.com.br/Leodf/walletcore/balances/internal/domain/exception"
